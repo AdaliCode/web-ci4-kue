@@ -36,7 +36,7 @@
     </div>
     <div class="col">
         <div class="mx-3">
-            <h1>Lemper Monami Bakery</h1>
+            <h1><?= ucwords($newProduct['name']); ?></h1>
             <p>
                 Lemper Monami Bakery dengan tekstur yang legit, rasa gurih daging ayam, dan dibungkus menggunakan daun pisang.
                 Sajian ini memiliki cita rasa yang begitu enak, sedap dan istimewa....!
