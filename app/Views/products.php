@@ -10,7 +10,7 @@
 <div class="row g-2 my-3">
     <?php foreach (explode(',', $category['all_products']) as $key => $product) : ?>
         <div class="col-md-3 mb-2">
-            <div class="card border border-dark text-center">
+            <div class="card text-center">
                 <img src="../img/<?= strtolower($category['id']); ?>.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title"><?= strtoupper($product); ?></h5>
