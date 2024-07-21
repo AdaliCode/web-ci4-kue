@@ -9,17 +9,11 @@
         </div>
     </nav>
     <ul class="nav justify-content-center bg-light p-2">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">JAJANAN PASAR</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">ROTI</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">KUE KERING</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">PAKET TAMPAH, PAKET BOX, FROZEN</a>
-        </li>
+        <?php foreach ($categories as $key => $category) : ?>
+            <li class="nav-item">
+                <!-- <a class="nav-link active" aria-current="page" href="#">JAJANAN PASAR</a> -->
+                <a class="nav-link mx-3 text-dark" href="#"><?= strtoupper($category['name']); ?></a>
+            </li>
+        <?php endforeach; ?>
     </ul>
 </div>

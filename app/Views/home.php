@@ -6,25 +6,16 @@
 </div>
 <div class="row mt-5 g-2" id="kategori-produk">
     <h3 class="text-center">KATEGORI PRODUK</h3>
-    <?php for ($i = 0; $i < 6; $i++) : ?>
+    <?php foreach ($categories as $key => $category) : ?>
         <div class="col-md-3 mb-2">
             <div class="card text-bg-dark">
                 <img src="img/lemper.jpg" class="card-img" alt="...">
-                <!-- .card-img-overlay {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
-                    padding: 1 rem;
-                    border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));;
-                } -->
                 <div class="card-img-overlay" style="display: flex; align-items: center;justify-content: center;width: 100%;background: rgba(57, 57, 57, 0.5);">
-                    <h5 class="card-title" style="font-weight: 700;">JAJANAN PASAR</h5>
+                    <h5 class="card-title" style="font-weight: 700;"><?= strtoupper($category['name']); ?></h5>
                 </div>
             </div>
         </div>
-    <?php endfor; ?>
+    <?php endforeach; ?>
     <h5 class="text-center">Lihat Semua Kategori -></h5>
 </div>
 <!-- </div> -->

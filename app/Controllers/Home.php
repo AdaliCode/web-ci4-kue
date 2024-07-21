@@ -2,22 +2,24 @@
 
 namespace App\Controllers;
 
+use App\Models\CategoryModel;
 use App\Models\ProductModel;
 
 
 class Home extends BaseController
 {
-    protected $productmodel;
+    protected $productModel, $categoryModel;
     public function __construct()
     {
-        $this->productmodel = new ProductModel();
+        $this->productModel = new ProductModel();
+        $this->categoryModel = new CategoryModel();
     }
     public function index()
     {
-        // return var_dump($this->productmodel->orderBy('id', 'desc')->first());
         $data = [
             'title' => 'ARIIQ BAKERY',
-            'newProduct' => $this->productmodel->orderBy('id', 'desc')->first()
+            'newProduct' => $this->productModel->orderBy('id', 'desc')->first(),
+            'categories' => $this->categoryModel->paginate(4)
         ];
         return view('home', $data);
     }
