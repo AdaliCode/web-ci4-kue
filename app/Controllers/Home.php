@@ -23,4 +23,13 @@ class Home extends BaseController
         ];
         return view('home', $data);
     }
+
+    public function products($id)
+    {
+        $data = [
+            'title' => 'ARIIQ BAKERY',
+            'category' => $this->categoryModel->products(strtolower($id))
+        ];
+        return view('products', $data);
+    }
 }

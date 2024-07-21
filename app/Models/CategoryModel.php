@@ -8,4 +8,9 @@ class CategoryModel extends Model
 {
     protected $table            = 'categories';
     protected $useAutoIncrement = false;
+
+    public function products($id)
+    {
+        return $this->table('categories')->select(['categories.*', 'GROUP_CONCAT(products.name SEPARATOR \', \') as all_products'])->join('products', 'categories.id = products.category_id', 'inner')->find($id);
+    }
 }

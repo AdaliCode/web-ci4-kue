@@ -27,6 +27,7 @@
 
 <body>
     <?= $this->include('layout/navbar'); ?>
+    <?= $this->renderSection('top-content'); ?>
     <div class="container py-4">
         <?= $this->renderSection('container'); ?>
     </div>

@@ -9,7 +9,7 @@
         </div>
     </nav>
     <ul class="nav justify-content-center bg-light p-2">
-        <?php foreach ($categories as $key => $category) : ?>
+        <?php foreach (model('CategoryModel')->findAll() as $key => $category) : ?>
             <li class="nav-item">
                 <!-- <a class="nav-link active" aria-current="page" href="#">JAJANAN PASAR</a> -->
                 <a class="nav-link mx-3 text-dark" href="#"><?= strtoupper($category['name']); ?></a>

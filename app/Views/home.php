@@ -8,12 +8,14 @@
     <h3 class="text-center">KATEGORI PRODUK</h3>
     <?php foreach ($categories as $key => $category) : ?>
         <div class="col-md-3 mb-2">
-            <div class="card text-bg-dark">
-                <img src="img/lemper.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay" style="display: flex; align-items: center;justify-content: center;width: 100%;background: rgba(57, 57, 57, 0.5);">
-                    <h5 class="card-title" style="font-weight: 700;"><?= strtoupper($category['name']); ?></h5>
+            <a href="/category/<?= strtolower($category['id']);  ?>">
+                <div class="card text-bg-dark">
+                    <img src="img/<?= strtolower($category['id']); ?>.jpg" class="card-img" alt="..." height="150">
+                    <div class="card-img-overlay" style="display: flex; align-items: center;justify-content: center;width: 100%;background: rgba(57, 57, 57, 0.5);">
+                        <h5 class="card-title" style="font-weight: 700;"><?= strtoupper($category['name']); ?></h5>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     <?php endforeach; ?>
     <h5 class="text-center">Lihat Semua Kategori -></h5>
@@ -23,7 +25,7 @@
 <?= $this->section('bottom-content'); ?>
 <div class="row g-0 align-items-center" style="background-color: #ccccb3;">
     <div class="col-6">
-        <img src="img/lemper.jpg" class="card-img" width="100%">
+        <img src="img/<?= strtolower($newProduct['category_id']); ?>.jpg" class="card-img" width="100%">
     </div>
     <div class="col">
         <div class="mx-3">
@@ -48,7 +50,7 @@
         </div>
     </div>
     <div class="col-6">
-        <img src="img/pastel.jpg" class="card-img" width="100%">
+        <img src="img/gorengan.jpg" class="card-img" width="100%">
     </div>
 
 </div>
