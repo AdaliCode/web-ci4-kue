@@ -18,7 +18,6 @@
             </a>
         </div>
     <?php endforeach; ?>
-    <h5 class="text-center">Lihat Semua Kategori -></h5>
 </div>
 <!-- </div> -->
 <?= $this->endSection(); ?>

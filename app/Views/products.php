@@ -1,8 +1,8 @@
 <?= $this->extend('layout/template'); ?>
 <?= $this->section('top-content'); ?>
-<div class="bg-secondary py-4 text-light">
+<div class="py-4 text-light" style="background-image:url('../img/<?= strtolower($category['id']); ?>.jpg');background-repeat: no-repeat;background-size: cover;text-shadow: 0.07em 0.07em 0.05em black;">
     <div class="container">
-        <h3 style="font-weight: 600;"><?= $category['name']; ?></h3>
+        <h3 style="font-weight: 600;"><?= strtoupper($category['name']); ?></h3>
     </div>
 </div>
 <?= $this->endSection(); ?>
@@ -19,9 +19,6 @@
             </div>
         </div>
     <?php endforeach; ?>
-</div>
-<div class="d-flex justify-content-md-center">
-    <a href="" class="rounded btn btn-secondary">Muat Lebih Banyak</a>
 </div>
 <script src="../products.js"></script>
 <?= $this->endSection(); ?>
