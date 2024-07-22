@@ -11,7 +11,7 @@
     <ul class="nav justify-content-center bg-light p-2">
         <?php foreach (model('CategoryModel')->findAll() as $key => $category) : ?>
             <li class="nav-item">
-                <a class="nav-link mx-3 text-dark" href=" <?= base_url('/category/' . strtolower($category['id'])); ?>"><?= strtoupper($category['name']); ?></a>
+                <a class="nav-link mx-3 text-dark" href="<?= base_url('/product/category/' . strtolower($category['id'])); ?>"><?= strtoupper($category['name']); ?></a>
             </li>
         <?php endforeach; ?>
     </ul>

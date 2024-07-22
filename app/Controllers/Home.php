@@ -24,12 +24,21 @@ class Home extends BaseController
         return view('home', $data);
     }
 
-    public function products($id)
+    public function category($id)
     {
         $data = [
             'title' => 'ARIIQ BAKERY',
             'category' => $this->categoryModel->products(strtolower($id))
         ];
         return view('products', $data);
+    }
+    public function product($slug)
+    {
+        $data = [
+            'title' => 'ARIIQ BAKERY',
+            'product' => $this->productModel->where('slug', $slug)->first()
+        ];
+        // return var_dump($data['category']->first());
+        return view('product', $data);
     }
 }
